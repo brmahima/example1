@@ -1,0 +1,12 @@
+if($_SERVER['REQUEST_METHOD']=='POST'){
+$image_no="5";//or Anything You Need
+$image = $_POST['image'];
+$path = "uploads/".$image_no.".png";
+
+$status = file_put_contents($path,base64_decode($image));
+if($status){
+ echo "Successfully Uploaded";
+}else{
+ echo "Upload failed";
+}
+}
