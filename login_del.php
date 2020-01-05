@@ -7,8 +7,8 @@ include "config.php";
 
 $user = $_POST['user'];
 
-
-
+// this is the only way i can safe my self
+$algidaq = $_POST['user'];
 
 $query = "select *from delivery where user_name='".$user."'";
 $result = mysqli_query($connect,$query);
